@@ -17,6 +17,8 @@ textarea {
   margin-right: auto;
   margin-left: auto;
   border-style: hidden;
+  border-bottom: 1px solid;
+  outline: none;
   width:100%;
 }
 label{

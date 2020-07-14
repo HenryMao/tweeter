@@ -9,6 +9,8 @@ nav {
   padding-right: 1.5em;
   justify-content: space-between;
   width:100%;
+  position: fixed;
+  top:0;
 }
 span {
   font-family:"Bungee";
