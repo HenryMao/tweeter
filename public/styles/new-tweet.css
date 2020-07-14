@@ -1,0 +1,28 @@
+.new-tweet {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+h2{
+  margin-right: auto;
+  margin-left: auto;
+}
+button {
+  background-color: burlywood ;
+  border-radius: 5px;
+  border-style: hidden;
+}
+textarea {
+  margin-right: auto;
+  margin-left: auto;
+  border-style: hidden;
+  width:100%;
+}
+label{
+  margin-right: 50%;
+}
+.tweet-bottom{
+  display:flex;
+  justify-content: space-between;
+}
