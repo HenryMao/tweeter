@@ -19,8 +19,18 @@ $(document).ready(function(){
     let image = tweet.user.avatars;
     let handle = tweet.user.handle;
     let content = tweet.content.text;
-    let timestamp = tweet.created_at;
     let contentFiltered = `${escape(content)}`;
+    
+    let date = Date.now();
+    let time = date - tweet.created_at;
+    let secondT = Math.floor(time/1000);
+    let minuteT = Math.floor(secondT/60);
+    let hourT = Math.floor(minuteT/60);
+    let days = Math.floor(hourT/24);
+    let seconds = secondT % 60;
+    let minutes = minuteT % 60;
+    let hours = hourT%24;
+    
     let $new_tweet = $(`<article class = "tweet">
       <header class="tweets-header">
       <h6 class = "creator-handle"><img class="tweets-pic" src="${image}"> ${name}</h6>
@@ -30,7 +40,7 @@ $(document).ready(function(){
       ${contentFiltered}
       </p>
       <footer class="tweets-footer">
-      <p class="footer-element">${timestamp}</p>
+      <p class="footer-element">${days} days ${hours} hours ${minutes}minutes ${seconds}seconds ago</p>
       <p class="footer-element">reactions</p>
       </footer></article>`)
   
@@ -72,17 +82,14 @@ $(".new-tweet-form").submit(function(event){
     let $errorMessage = $(`<div id="errorM">Please enter something to tweet...</div>`);
     $(".errorMessage").prepend($errorMessage);
     $("#errorM").show().delay(3000).fadeOut();
-
   }
   else {
     $(".errorMessage").empty();
-    console.log($(this).serialize());
     $.ajax({
       url: '/tweets/',
       method: 'POST',
       data: $(this).serialize()})
     .then(function(response) {
-      console.log("pls");
       loadTweets();
     })
     $('#tweet-text').val('');
