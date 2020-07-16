@@ -26,7 +26,7 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
-      <span>ok</span>
+      <button>Write a new Tweet</button>
     </nav>
     <header class="profile">
       <div>
@@ -40,7 +40,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2 class ="new-tweet head">
+        <div class="errorMessage"></div>
         <form class ="new-tweet-form"method="POST" action="/tweets/">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>

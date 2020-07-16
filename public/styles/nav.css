@@ -15,3 +15,9 @@ nav {
 span {
   font-family:"Bungee";
 }
+@media only screen and (min-width: 1024px) {
+nav{
+  background-color:#c1982b;
+}
+ 
+}

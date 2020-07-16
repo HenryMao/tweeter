@@ -29,3 +29,9 @@ label{
   display:flex;
   justify-content: space-between;
 }
+.errorMessage{
+  text-align: center;
+}
+@media only screen and (min-width: 1024px) {
+  
+}
