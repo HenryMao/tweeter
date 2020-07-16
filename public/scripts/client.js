@@ -49,6 +49,7 @@ const loadTweets = function(){
   .then(function(tweetData){
     $(".tweets").empty();
     renderTweet(tweetData);
+   
   })
 }
 
@@ -71,7 +72,9 @@ $(".new-tweet-form").submit(function(event){
       console.log("pls");
       loadTweets();
     })
-    
+    $('#tweet-text').val('');
+    $('.counter').val(140);
+  
   }
   
 
