@@ -22,10 +22,10 @@ article{
   padding: 2%;
   word-wrap: break-word;
 }
-h6.handle{
+p#reactions{
   visibility: hidden;
 }
-article.tweet:hover h6.handle{
+article.tweet:hover p#reactions{
   visibility: visible;
 }
 
