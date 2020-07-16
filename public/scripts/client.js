@@ -56,15 +56,24 @@ loadTweets();
 
 $(".new-tweet-form").submit(function(event){
   event.preventDefault();
-
-  $.ajax({
-    url: '/tweets/',
-    method: 'POST',
-    data: $(this).serialize()})
-  .then(function(response) {
-    console.log("pls");
-    loadTweets();
-})
+  if($("#tweet-text").val().length > 140){
+    alert("Too long!");
+    
+  } else if($("#tweet-text").val().length  <= 0){
+    alert("Too short!");
+  }
+  else {
+    $.ajax({
+      url: '/tweets/',
+      method: 'POST',
+      data: $(this).serialize()})
+    .then(function(response) {
+      console.log("pls");
+      loadTweets();
+    })
+    
+  }
+  
 
 })
 
