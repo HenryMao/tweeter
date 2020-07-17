@@ -18,3 +18,6 @@ This repository is the starter code for the project: Students will fork and clon
 - body-parser
 - chance
 - md5
+
+!["Tablet Screenshot"](https://github.com/HenryMao/tweeter/blob/master/pictures/wide-screen.png)
+!["Desktop Screenshot"](https://github.com/HenryMao/tweeter/blob/master/pictures/narrow-screen.png)
